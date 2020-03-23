@@ -1,16 +1,70 @@
-//
-//  TrigDef.h
-//  
-//
-//  Created by Orlando Hoilett on 1/5/18.
-//
+/*
+ FILENAME:	TrigDef.h
+ AUTHOR:	Orlando S. Hoilett
+ CONTACT:	ohoilett@purdue.edu
+ VERSION:	0.1.0
+ 
+ 
+ AFFILIATIONS
+ Linnes Lab, Weldon School of Biomedical Engineering,
+ Purdue University, West Lafayette, IN 47907
+ 
+ 
+ DESCRIPTION
+ Look-up tables for trigonometric definitions to improve computation speed of
+ FFT and other algorithms. Implemented as a static class to avoid "multiple
+ definitions of" error. There are different arrays for each number of samples,
+ but will soon add the option of a singular array with 1000 or so samples.
+ 
+ 
+ UPDATES
+ Version 0.0.0
+ 2018/01/05:1200>
+ 			- Initial commit.
+ Version 0.1.0
+ 2020/03/13:1545>
+ 			Added the "static" keyword to each of the arrays to avoid the
+ 			"multiple definitions of" error.
+ 
+ 
+ 
+ DISCLAIMER
+ Linnes Lab code, firmware, and software is released under the
+ MIT License (http://opensource.org/licenses/MIT).
+ 
+ The MIT License (MIT)
+ 
+ Copyright (c) 2018 Linnes Lab, Purdue University
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ 
+ 
+ */
+
+
+
 
 #ifndef TrigDef_h
 #define TrigDef_h
 
-//TRIG DEFINITIONS
 
-int intcosine128[128] = {
+static int intcosine128[128] = {
 1000,
 998,995,989,980,970,956,941,923,903,881,
 857,831,803,773,740,707,671,634,595,555,
@@ -28,7 +82,7 @@ int intcosine128[128] = {
 };
 
 
-int intsine128[128] = {
+static int intsine128[128] = {
 0,
 -49,-98,-146,-195,-242,-290,-336,-382,-427,-471,
 -514,-555,-595,-634,-671,-707,-740,-773,-803,-831,
@@ -47,7 +101,7 @@ int intsine128[128] = {
 
 
 
-double cosine128[128] = {
+static double cosine128[128] = {
 1.0000000,
 0.9987954,0.9951848,0.9891765,0.9807852,0.9700312,0.9569403,
 0.9415441,0.9238796,0.9039893,0.8819212,0.8577285,0.8314696,
@@ -73,7 +127,7 @@ double cosine128[128] = {
 	0.9987954 };
 
 
-double cosine127[128] = {
+static double cosine127[128] = {
 1.0000000,
 0.9987764,0.9951086,0.9890057,0.9804824,0.9695598,0.9562645,
 0.9406291,0.9226919,0.9024965,0.8800927,0.8555351,0.8288839,
@@ -100,7 +154,7 @@ double cosine127[128] = {
 };
 
 
-double sine128[128] = {
+static double sine128[128] = {
 0.0000000,
 -0.0490677,-0.0980171,-0.1467305,-0.1950903,-0.2429802,-0.2902847,
 -0.3368899,-0.3826834,-0.4275551,-0.4713967,-0.5141028,-0.5555703,
@@ -127,7 +181,7 @@ double sine128[128] = {
 };
 
 
-double sine127[128] = {
+static double sine127[128] = {
 0.0000000,
 -0.0494537,-0.0987864,-0.1478774,-0.1966064,-0.2448544,-0.2925031,
 -0.3394361,-0.3855383,-0.4306972,-0.4748020,-0.5177449,-0.5594207,
@@ -205,7 +259,7 @@ double sine127[128] = {
 
 
 
-int intcosine256[256] = {
+static int intcosine256[256] = {
 1000,
 999,998,997,995,992,989,985,980,975,970,
 963,956,949,941,932,923,914,903,893,881,
@@ -285,7 +339,7 @@ int intcosine256[256] = {
 
 
 
-double cosine255[256] = {
+static double cosine255[256] = {
 1.0000000,
 0.9996964,0.9987860,0.9972692,0.9951469,0.9924205,0.9890916,
 0.9851622,0.9806347,0.9755119,0.9697969,0.9634931,0.9566044,
@@ -382,7 +436,7 @@ double cosine255[256] = {
 //};
 
 
-int intsine256[256] = {
+static int intsine256[256] = {
 0,
 -24,-49,-73,-98,-122,-146,-170,-195,-219,-242,
 -266,-290,-313,-336,-359,-382,-405,-427,-449,-471,
@@ -459,7 +513,7 @@ int intsine256[256] = {
 //0.0735645636,0.0490676743,0.0245412285 };
 
 
-double sine255[256] = {
+static double sine255[256] = {
 0.0000000,
 -0.0246374,-0.0492599,-0.0738525,-0.0984003,-0.1228883,-0.1473017,
 -0.1716257,-0.1958455,-0.2199464,-0.2439137,-0.2677330,-0.2913897,
@@ -507,7 +561,7 @@ double sine255[256] = {
 };
 
 
-int intcosine64[64] = {
+static int intcosine64[64] = {
 1000,
 995,980,956,923,881,831,773,707,634,555,
 471,382,290,195,98,0,-98,-195,-290,-382,
@@ -519,7 +573,7 @@ int intcosine64[64] = {
 };
 
 
-int intsine64[64] = {
+static int intsine64[64] = {
 0,
 -98,-195,-290,-382,-471,-555,-634,-707,-773,-831,
 -881,-923,-956,-980,-995,-1000,-995,-980,-956,-923,
@@ -531,7 +585,7 @@ int intsine64[64] = {
 };
 
 
-int intcosine32[32] = {
+static int intcosine32[32] = {
 1000,
 980,923,831,707,555,382,195,0,-195,-382,
 -555,-707,-831,-923,-980,-1000,-980,-923,-831,-707,
@@ -540,7 +594,7 @@ int intcosine32[32] = {
 };
 
 
-int intsine32[32] = {
+static int intsine32[32] = {
 0,
 -195,-382,-555,-707,-831,-923,-980,-1000,-980,-923,
 -831,-707,-555,-382,-195,0,195,382,555,707,
