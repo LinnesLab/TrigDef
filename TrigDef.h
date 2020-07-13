@@ -1,8 +1,8 @@
 /*
  FILENAME:	TrigDef.h
  AUTHOR:	Orlando S. Hoilett
- CONTACT:	ohoilett@purdue.edu
- VERSION:	0.1.0
+ CONTACT:	orlandohoilett@gmail.com
+ VERSION:	1.0.0
  
  
  AFFILIATIONS
@@ -25,7 +25,10 @@
  2020/03/13:1545>
  			Added the "static" keyword to each of the arrays to avoid the
  			"multiple definitions of" error.
- 
+ Version 1.0.0
+ 2020/07/13:0047> (UTC-5)
+			- Updated version number to match semantic versioning. Also updated
+ 			contact info.
  
  
  DISCLAIMER
