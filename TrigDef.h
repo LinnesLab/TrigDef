@@ -1,8 +1,8 @@
 /*
  FILENAME:	TrigDef.h
- AUTHOR:	Orlando S. Hoilett
+ AUTHOR:	Orlando S. Hoilett and Akio K. Fujita
  CONTACT:	orlandohoilett@gmail.com
- VERSION:	1.0.0
+ VERSION:	1.0.1
  
  
  AFFILIATIONS
@@ -29,6 +29,9 @@
  2020/07/13:0047> (UTC-5)
 			- Updated version number to match semantic versioning. Also updated
  			contact info.
+ Version 1.0.1
+ 2020/09/28:2338> (UTC-5)
+ 			- Updated comments including author list.
  
  
  DISCLAIMER
